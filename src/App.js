@@ -1,5 +1,5 @@
 import "./App.css";
-
+import Header from "./Header.js";
 const App = () => {
     const cart = [
       { name: "p1", price: 200, quantity: 25, discription: "d1" },
@@ -34,6 +34,7 @@ const App = () => {
 
   return(
     <div className="App">
+      <Header/>
       <h1>cart data</h1>
       <div className="center">
         <table>
