@@ -47,3 +47,9 @@ table, tr, th, td{
   display: flex;
   justify-content: center;
 }
+.footer{
+  margin-top: 50px;
+}
+.footer span{
+  padding: 15px;
+}

@@ -1,6 +1,6 @@
 import "./App.css";
 
-const App = () => {
+const Cart = () => {
     const cart = [
       { name: "p1", price: 200, quantity: 25, discription: "d1" },
       { name: "p2", price: 346, quantity: 160, discription: "d2" },
@@ -66,7 +66,7 @@ const App = () => {
   )
 };
 
-export default App;
+export default Cart;
 
 //table =============================================================================
 // function App()
