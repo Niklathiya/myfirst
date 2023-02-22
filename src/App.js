@@ -4,12 +4,14 @@ import Cart from "./Cart.js";
 import Footer from "./Footer";
 
 const App = () => {
-    
+    const username = "Admin";
+    const product = "Product";
+    const links = ['Facebook', 'Twitter', 'Whatsapp', 'LinkedIn', 'Instagram'];
   return(
     <div className="App">
-      <Header/>
-      <Cart/>
-      <Footer/>
+      <Header username={username}/>
+      <Cart product={product}/>
+      <Footer links={links}/>
     </div>
   )
 };
