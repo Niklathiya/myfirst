@@ -1,6 +1,6 @@
 import "./App.css";
 
-const Cart = () => {
+const Cart = (props) => {
     const cart = [
       { name: "p1", price: 200, quantity: 25, discription: "d1" },
       { name: "p2", price: 346, quantity: 160, discription: "d2" },
@@ -26,7 +26,7 @@ const Cart = () => {
 
   return(
     <div className="App">
-      <h1>cart data</h1>
+      <h1>cart data of {props.product}</h1>
       <div className="center">
         <table>
           <thead>

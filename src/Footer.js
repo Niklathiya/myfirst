@@ -1,9 +1,9 @@
 import SocialLinks from "./component/SocialLinks"
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div>
-        <SocialLinks/>
+        <SocialLinks links={props.links}/>
     </div>
   )
 }
