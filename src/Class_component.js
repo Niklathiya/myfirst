@@ -1,7 +1,34 @@
 import React, { Component } from 'react'
 
 export default class Class_component extends Component {
+
+    constructor(props){
+      super(props)
+      this.state ={
+        name : 'hotel',
+        email : 'hotel@gmail.com'
+      }
+    }
+    
+    componentDidMount()
+    {
+      console.log('Mount');
+    }
+    componentDidUpdate()
+    {
+      console.log('update');
+    }
+    componentWillUnmount()
+    {
+      console.log('unmount');
+    }
+
+
     render() {
+     const Onchange = () =>
+    {
+      this.setState({name: 'hotel2', email: 'hotel2@gmail.com'});
+    }
     const cart = [
         { name: "p1", price: 200, quantity: 25, discription: "d1" },
         { name: "p2", price: 346, quantity: 160, discription: "d2" },
@@ -16,19 +43,13 @@ export default class Class_component extends Component {
         { name: "d10", price: 6768, quantity: 5, discription: "d10" },
     ];
 
-    const total = cart.reduce((acc, curr)=>{
-    return acc + curr.quantity
-    },0)
-    
-    const maintotal = cart.reduce((acc, curr) => {
-    return acc + (curr.quantity * curr.price);
-    }, 0);
-
-    
-
     return (
         <div className="App">
         <h1>cart data of {this.props.product} </h1>
+        <h2>{this.state.name} </h2>
+        <h2>{this.state.email} </h2>
+        <button onClick={Onchange}>Click</button>
+
         <div className="center">
           <table>
             <thead>
@@ -38,7 +59,6 @@ export default class Class_component extends Component {
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Discription</th>
-                <th>Total</th>
               </tr>
             </thead>
   
@@ -50,14 +70,8 @@ export default class Class_component extends Component {
                   <td>{i?.price}</td>
                   <td>{i?.quantity}</td>
                   <td>{i?.discription}</td>
-                  <td>{i?.price * i?.quantity}</td>
                 </tr>
               ))}
-              <tr>
-                <td>Quantity</td>
-                <td colSpan={4}>{total}</td>
-                <td>{maintotal}</td>
-            </tr>
             </tbody>
           
           </table>  
