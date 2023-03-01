@@ -3,6 +3,20 @@ import Header from "./Header.js";
 import Cart from "./Cart.js";
 import Footer from "./Footer";
 import Class_component from "./Class_component";
+import{
+  Routes, Route
+}from "react-router-dom"
+import About from "./pages/About.js";
+import Contact from "./pages/Contact.js";
+
+const Text = (props) =>
+{
+  return (
+    <div>
+      hi {props.username}
+    </div>
+  )
+}
 
 const App = () => {
     const username = "Admin";
@@ -12,8 +26,14 @@ const App = () => {
   return(
     <div className="App">
       <Header username={username}/>
-      {/* <Cart product={product}/> */}
-      <Class_component product={product}/>
+        <Routes>
+          <Route path="/Product" element={<Cart product={product}/>} />
+          <Route path="/About" element={<About/>} />
+          <Route path="/Contact" element={<Contact/>} />
+          
+          {/* <Class_component product={product}/> */}
+          {/* <Text username ={username}/> */}
+        </Routes>
       <Footer links={links}/>
     </div>
   )
