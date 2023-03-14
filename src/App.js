@@ -8,6 +8,8 @@ import{
 }from "react-router-dom"
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
+import Usestate from "./Usestate";
+import Event_render from "./Event_render";
 
 const Text = (props) =>
 {
@@ -25,16 +27,18 @@ const App = () => {
     
   return(
     <div className="App">
-      <Header username={username}/>
+      <Event_render/>
+      {/* <Usestate /> */}
+      {/* <Header username={username}/>
         <Routes>
           <Route path="/Product" element={<Cart product={product}/>} />
           <Route path="/About" element={<About/>} />
           <Route path="/Contact" element={<Contact/>} />
           
-          {/* <Class_component product={product}/> */}
-          {/* <Text username ={username}/> */}
+          <Class_component product={product}/>
+          <Text username ={username}/>
         </Routes>
-      <Footer links={links}/>
+      <Footer links={links}/> */}
     </div>
   )
 };
