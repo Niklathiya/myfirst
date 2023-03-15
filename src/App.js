@@ -10,6 +10,7 @@ import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
 import Usestate from "./Usestate";
 import Event_render from "./Event_render";
+import Dynamictable from "./Dynamictable";
 
 const Text = (props) =>
 {
@@ -27,8 +28,7 @@ const App = () => {
     
   return(
     <div className="App">
-      <Event_render/>
-      {/* <Usestate /> */}
+      <Dynamictable/>
       {/* <Header username={username}/>
         <Routes>
           <Route path="/Product" element={<Cart product={product}/>} />
