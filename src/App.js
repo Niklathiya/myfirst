@@ -11,6 +11,7 @@ import Contact from "./pages/Contact.js";
 import Usestate from "./Usestate";
 import Event_render from "./Event_render";
 import Dynamictable from "./Dynamictable";
+import UseRef from "./UseRef";
 
 const Text = (props) =>
 {
@@ -28,7 +29,7 @@ const App = () => {
     
   return(
     <div className="App">
-      <Dynamictable/>
+      <UseRef/>
       {/* <Header username={username}/>
         <Routes>
           <Route path="/Product" element={<Cart product={product}/>} />
